@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtudes Calçados</title>
+    <header>
+        <img src="c:\Users\cliente\OneDrive\Imagens\Capturas de tela\Captura de tela 2024-11-03 184958.png" alt="Imagem da Loja" style="max-width: 170px; margin-bottom: 15px; border: 5px solid red; border-radius: 50%;">
+    </header>    
+    <style>
+        /* Estilos permanecem os mesmos do exemplo anterior... */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 2em 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            background-color: #333;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff9900;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            color: #444;
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .product-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-item {
+            width: 220px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+            text-align: center;
+        }
+        .product-item:hover {
+            transform: scale(1.05);
+        }
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-info p {
+            margin: 10px 0;
+        }
+        .product-info button {
+            background-color: #ff9900;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .product-info button:hover {
+            background-color: #e68a00;
+        }
+        .contact-info {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .contact-info li {
+            font-size: 1.1em;
+            margin: 8px 0;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5em;
+            margin-top: 30px;
+        }
+        .testimonial-section {
+            margin: 40px 0;
+            background-color: #e8e8e8;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .testimonial {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #fff;
+            border-left: 4px solid #ff9900;
+            border-radius: 5px;
+        }
+        .blog-section {
+            margin: 40px 0;
+        }
+        .blog-post {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .blog-post h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .blog-post p {
+            margin: 10px 0;
+        }
+        .chatbot-section {
+            background-color: #e8e8e8;
+            padding: 20px;
+            border-radius: 8px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        .chatbot-messages {
+            height: 200px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+        .chatbot-input {
+            display: flex;
+        }
+        .chatbot-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .chatbot-input button {
+            background-color: #ff9900;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .chatbot-input button:hover {
+            background-color: #e68a00;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Virtudes Calçados</h1>
+        <p>Loja Especialista Em calçados De Todos Os estilos E Gostos</p>
+    </header>
+    
+    <style>
+        nav {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px; /* Espaço abaixo da barra de navegação */
+        }
+    
+        nav a {
+            text-decoration: none;
+            border: 2px solid red; /* Borda vermelha */
+            border-radius: 15px; /* Bordas arredondadas */
+            padding: 10px 20px; /* Espaço interno */
+            color: white; /* Cor do texto */
+            background-color: #e63946; /* Cor de fundo dos botões */
+            transition: background-color 0.3s, color 0.3s; /* Transição suave */
+            font-weight: bold; /* Negrito para o texto */
+        }
+    
+        nav a:hover {
+            background-color: #d62839; /* Cor de fundo ao passar o mouse */
+            color: white; /* Manter a cor do texto */
+        }
+    </style>
+    
+    <nav>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre a Loja</a>
+        <a href="#contato">Contato</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#blog">Blog</a>
+    </nav>
+    
+    <div class="container">
+        <!-- Seção de Produtos -->
+<section id="produtos">
+    <h2>Nossos Produtos</h2>
+    <p>Explore nossos Calçados.</p>
+    <div class="product-gallery">
+        <!-- Produtos existentes -->
+        <div class="product-item">
+            <img src="c:\Users\cliente\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\EE715DAA76F1B51D80343F45547BE570\Imagem do WhatsApp de 2024-11-03 à(s) 16.14.59_a66c5e54.jpg" alt="Tênis Esportivo">
+            <div class="product-info">
+                <p><strong>Sapato Social Couro</strong></p>
+                <p>R$ 130,00</p>
+                <button onclick="window.location.href='detalhes-sapato-social.html'">Ver Detalhes</button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="c:\Users\cliente\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\3DB54F5573CD617A0112D35DD1E6B1EF\Imagem do WhatsApp de 2024-11-03 à(s) 16.14.59_58ae3791.jpg" alt="Sapato da Adidas">
+            <div class="product-info">
+                <p><strong>Sapato Adidas</strong></p>
+                <p>R$ 110,00</p>
+                <button onclick="window.location.href='detalhes-sapato-adidas.html'">Ver Detalhes</button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="c:\Users\cliente\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\B0BF8B3DAF61246D13276DC8DCDFB87D\Imagem do WhatsApp de 2024-11-03 à(s) 16.15.00_fc6a8716.jpg" alt="Bota Masculina">
+            <div class="product-info">
+                <p><strong>Sapato Unisex Vert</strong></p>
+                <p>R$ 100</p>
+                <button onclick="window.location.href='detalhes-sapato-unisex.html'">Ver Detalhes</button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="c:\Users\cliente\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\8D2355364E9A2BA1F82F975414937B43\Imagem do WhatsApp de 2024-11-03 à(s) 16.15.00_6f87183a.jpg" alt="Sandália Feminina">
+            <div class="product-info">
+                <p><strong>Sapato Fila</strong></p>
+                <p>R$ 80,00</p>
+                <button onclick="window.location.href='detalhes-sapato-fila.html'">Ver Detalhes</button>
+            </div>
+        </div>
+
+        <!-- Novos produtos -->
+        <div class="product-item">
+            <img src="c:\Users\cliente\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\E6ED5DACBFE60A3EA12E24759D7D5647\Imagem do WhatsApp de 2024-11-03 à(s) 16.15.00_2ab569bd.jpg" alt="Sapato Social">
+            <div class="product-info">
+                <p><strong>Chinelo Slide femino e masculino</strong></p>
+                <p>R$ 60,00</p>
+                <button onclick="window.location.href='detalhes-chinelo-slide.html'">Ver Detalhes</button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="c:\Users\cliente\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\AF3B6A54E9E9338ABC54258E3406E485\Imagem do WhatsApp de 2024-11-03 à(s) 16.15.01_8349c043.jpg" alt="Botina Feminina">
+            <div class="product-info">
+                <p><strong>Chuteira Cr7 futsal</strong></p>
+                <p>R$ Vendido</p>
+                <button onclick="window.location.href='detalhes-chuteira-cr7.html'">Ver Detalhes</button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="c:\Users\cliente\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\F7A82CE7E16D9687E7CD9A9FEB85D187\Imagem do WhatsApp de 2024-11-03 à(s) 16.15.01_9733abd2.jpg" alt="Sapato Infantil">
+            <div class="product-info">
+                <p><strong>Sapato nike com lacre original</strong></p>
+                <p>R$ Vendido</p>
+                <button onclick="window.location.href='detalhes-sapato-nike.html'">Ver Detalhes</button>
+            </div>
+        </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre">
+            <h2>Sobre a Virtudes Calçados</h2>
+            <p>Virtudes Calçados é uma loja especializada em oferecer o melhor em calçados para nossos clientes. Nossa vendedora, <strong>Viviane Rodrigues de Jesus</strong>, está pronta para ajudar você a encontrar o par perfeito!</p>
+            <p>Não realizamos entregas, apenas atendemos clientes que estão próximos à loja.</p>
+            <p>Confira nosso vídeo abaixo!</p>
+            <video width="30%" controls>
+                <source src="c:\Users\cliente\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\549406198764950208345D143AA67C7D\Vídeo do WhatsApp de 2024-08-29 à(s) 22.55.25_b3bd5a1c.mp4" type="video/mp4"> 
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </section>
+
+<!-- Seção de Ofertas Relâmpago -->
+<section id="ofertas" style="text-align: center; margin: 40px 0; background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 3px solid #ff9900; display: flex; align-items: center; justify-content: space-between;">
+    <img src="https://img2.gratispng.com/20180322/lrq/kisspng-lightning-clip-art-lightning-5ab46e835c4670.120762371521774211378.jpg" alt="Raio Esquerdo" style="width: 80px; height: auto;"/>
+    
+    <div style="flex: 1; text-align: center;">
+        <h2 style="font-size: 2em; color: #333; margin-bottom: 10px;">Ofertas Relâmpago</h2>
+        <p style="font-size: 1.2em; color: #666; margin-bottom: 20px;">Não perca nossas ofertas especiais por tempo limitado!</p>
+        <button onclick="window.location.href='oferta-relampago.html'" style="background-color: #ffcccc; color: #333; border: 2px solid #ff0000; padding: 15px 30px; border-radius: 5px; font-size: 1.2em; cursor: pointer; transition: background-color 0.3s, border-color 0.3s; margin-top: 10px;">
+            Confira as Ofertas
+        </button>
+    </div>
+    
+    <img src="https://img2.gratispng.com/20180322/lrq/kisspng-lightning-clip-art-lightning-5ab46e835c4670.120762371521774211378.jpg" alt="Raio Direito" style="width: 80px; height: auto;"/>
+</section>
+
+
+        <!-- Seção de Blog -->
+        <section id="blog" class="blog-section">
+            <h2>Nosso Blog</h2>
+            <div class="blog-post">
+                <h3>Porque escolher a Virtudes calçados?</h3>
+                <p>Pois aqui temos  produtos de alta qualidade e preços otimos</p>
+            </div>
+            <div class="blog-post">
+                <h3>E confiavel?</h3>
+                <p>sim varias pessoas ja compraram!</p>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <ul class="contact-info">
+                <li><strong>Vendedora:</strong> Viviane Rodrigues de Jesus</li>
+                <li><strong>Telefone:</strong> (31) 99787-3264</li>
+                <li><strong>Email:</strong> calcadosvirtudes@gmail.com</li>
+            </ul>
+            <h3>Formulário de Contato</h3>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Virtudes Calçados - Todos os direitos reservados.</p>
+        <p>
+            <a href="https://www.instagram.com/virtudes.calcados/" target="_blank" style="text-decoration: none; color: black;">
+                <img src="file:///C:/Users/cliente/OneDrive/Imagens/Capturas%20de%20tela/Captura%20de%20tela%202024-11-04%20112342.png" alt="Instagram" style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid red; vertical-align: middle; margin-right: 5px;">
+                Instagram Da loja
+            </a>
+        </p>
+    </footer>    
+    </script>
+</body>
+</html>

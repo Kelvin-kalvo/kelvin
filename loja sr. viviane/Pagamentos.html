@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pagamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://th.bing.com/th/id/R.ff900a0becedd90ca768ff01797fe58c?rik=IbzBlJJ4fCn4zA&pid=ImgRaw&r=0');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .payment-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ff9900;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            margin: 10px 0;
+        }
+        .payment-button:hover {
+            background-color: #e68a00;
+            transform: scale(1.05);
+        }
+        .warning {
+            margin: 20px 0;
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Formas de Pagamento</h1>
+    <a href="pix.html" class="payment-button">Pagar com Pix</a>
+    <a href="dinheiro.html" class="payment-button">Pagar em Dinheiro</a>
+    <a href="cartao.html" class="payment-button">Pagar com Cartão</a> <!-- Nova opção para cartão -->
+    <div class="warning">
+        <p><strong>Não vendemos fiado.</strong></p>
+    </div>
+</div>
+
+</body>
+</html>
